@@ -17,6 +17,9 @@ pose = mp_pose.Pose(static_image_mode=True,
                     )
 
 
+mp_pose = mp.solutions.pose
+
+
 
 def predict(img,model):
     # BGR转RGB
