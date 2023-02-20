@@ -15,3 +15,9 @@ git commit -m "first commit"
 git remote add origin https://github.com/shwj114514/FallingDetectionByMediapipe.git
 git push -u origin master
 ```
+
+切换账号
+```
+git config --global user.name "shwj114514"
+git config --global user.email "3278668047@qq.com"
+```
