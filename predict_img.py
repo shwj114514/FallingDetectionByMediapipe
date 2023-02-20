@@ -1,9 +1,8 @@
 import cv2
 import mediapipe as mp
-import numpy as np
 import torch
-
 from train import shwj
+from utils import softmax
 
 mp_pose = mp.solutions.pose
 
@@ -17,14 +16,6 @@ pose = mp_pose.Pose(static_image_mode=True,
                     min_tracking_confidence=0.5
                     )
 
-
-# 对tensor转numpy求最大值
-def softmax(x):
-    x = x[0].numpy()
-    exp_x = np.exp(x)
-    sum_exp_x = np.sum(exp_x)
-    y = exp_x / sum_exp_x
-    print("摔倒概率为:", y[1])
 
 
 def predict(img,model):
